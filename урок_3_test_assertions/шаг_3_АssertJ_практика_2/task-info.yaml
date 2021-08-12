@@ -16,7 +16,7 @@ files:
   visible: true
   placeholders:
   - offset: 314
-    length: 242
+    length: 8
     placeholder_text: // Arrange // Act // Assert
 - name: test/online_course_internals/BanknotesPickerTestTest.java
   visible: false

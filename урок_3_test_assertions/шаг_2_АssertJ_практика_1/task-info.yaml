@@ -16,13 +16,13 @@ files:
   visible: true
   placeholders:
   - offset: 356
-    length: 231
+    length: 0
     placeholder_text: // Arrange // Act // Assert
-  - offset: 695
-    length: 250
+  - offset: 464
+    length: 0
     placeholder_text: // Arrange // Act // Assert
-  - offset: 1048
-    length: 266
+  - offset: 567
+    length: 0
     placeholder_text: // Arrange // Act // Assert
 - name: test/online_course_internals/BanknotesPickerTestTest.java
   visible: false

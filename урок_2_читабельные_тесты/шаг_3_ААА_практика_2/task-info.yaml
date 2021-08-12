@@ -16,29 +16,29 @@ files:
   visible: true
   placeholders:
   - offset: 250
-    length: 25
+    length: 0
     placeholder_text: /* инициализируйте карту с негативным балансом */
-  - offset: 300
-    length: 50
+  - offset: 275
+    length: 0
     placeholder_text: /* запишите в переменную, что возвращает тестируемый метод */
-  - offset: 378
-    length: 39
+  - offset: 303
+    length: 0
     placeholder_text: /* проверьте, что тестируемый метод вернул true */
-  - offset: 546
-    length: 24
+  - offset: 432
+    length: 0
     placeholder_text: /* инициализируйте карту с позитивным балансом * */
-  - offset: 595
-    length: 50
+  - offset: 457
+    length: 0
     placeholder_text: /* запишите в переменную, что возвращает тестируемый метод */
-  - offset: 673
-    length: 40
+  - offset: 485
+    length: 0
     placeholder_text: /* проверьте, что тестируемый метод вернул false */
-  - offset: 838
+  - offset: 610
     length: 23
     placeholder_text: /* инициализируйте карту с нулевым балансом */
-  - offset: 886
+  - offset: 658
     length: 50
     placeholder_text: /* запишите в переменную, что возвращает тестируемый метод */
-  - offset: 964
+  - offset: 736
     length: 40
     placeholder_text: /* проверьте, что тестируемый метод вернул false */

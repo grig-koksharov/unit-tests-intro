@@ -9,7 +9,7 @@ public class CardTest {
     @Test
     public void should_have_positive_balance_when_balance_is_greater_than_0() {
         // Arrange
-        var card = new Card(10);
+        var card = ;
 
         // Act
         var isBalancePositive = card.hasPositiveBalance();
@@ -24,7 +24,7 @@ public class CardTest {
         var card = new Card(-10);
 
         // Act
-        var isBalancePositive = card.hasPositiveBalance();
+        var isBalancePositive = ;
 
         // Assert
         assertThat(isBalancePositive).isFalse();

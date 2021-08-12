@@ -16,11 +16,11 @@ files:
   visible: true
   placeholders:
   - offset: 264
-    length: 12
+    length: 0
     placeholder_text: /* Инициализировать карту с положительным балансом */
-  - offset: 619
-    length: 25
+  - offset: 607
+    length: 0
     placeholder_text: /* Записать в переменную, что возвращает тестируемый метод */
-  - offset: 964
+  - offset: 927
     length: 40
     placeholder_text: /* Проверить, что тестируемый метод вернул false */

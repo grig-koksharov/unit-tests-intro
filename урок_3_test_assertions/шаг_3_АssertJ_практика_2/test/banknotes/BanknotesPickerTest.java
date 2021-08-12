@@ -11,14 +11,6 @@ public class BanknotesPickerTest {
 
     @Test
         public void should_pick_banknotes_sorted() {
-        // Arrange
-        var amount = 8850;
 
-        // Act
-        var pickedBanknotes = banknotesPicker.pickBanknotesByAmount(amount);
-
-        // Assert
-        assertThat(pickedBanknotes)
-            .containsExactly(Banknote.values());
     }
 }
