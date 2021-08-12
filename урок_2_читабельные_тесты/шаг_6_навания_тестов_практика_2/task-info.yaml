@@ -1,0 +1,18 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: should_be_ugly_when_card_balance_is_777
+  is_correct: false
+- text: should_be_beautiful_when_each_digit_of_balance_is_7
+  is_correct: true
+- text: should_be_beautiful_when_balance_has_digit_7
+  is_correct: false
+- text: should_not_be_beautiful_when_each_digit_of_balance_is_7
+  is_correct: false
+- text: should_not_be_beautiful_when_any_digit_of_balance_is_not_7
+  is_correct: true
+message_correct: Правильно! :)
+message_incorrect: Неправильно :(
+files:
+- name: src/card/Card.java
+  visible: true

@@ -1,0 +1,4 @@
+type: edu
+files:
+- name: test/simple/SimpleTest.java
+  visible: true

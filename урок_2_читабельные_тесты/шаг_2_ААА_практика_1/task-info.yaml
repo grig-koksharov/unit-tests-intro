@@ -1,0 +1,26 @@
+type: edu
+files:
+- name: src/card/Card.java
+  visible: true
+- name: test/online_course_internals/CardTestTest.java
+  visible: false
+- name: src/online_course_internals/TestMode.java
+  visible: false
+- name: src/online_course_internals/TestedValues.java
+  visible: false
+- name: src/online_course_internals/UnderTestLogic.java
+  visible: false
+- name: src/online_course_internals/IncorrectTestMessages.java
+  visible: false
+- name: test/card/CardTest.java
+  visible: true
+  placeholders:
+  - offset: 264
+    length: 12
+    placeholder_text: /* Инициализировать карту с положительным балансом */
+  - offset: 619
+    length: 25
+    placeholder_text: /* Записать в переменную, что возвращает тестируемый метод */
+  - offset: 964
+    length: 40
+    placeholder_text: /* Проверить, что тестируемый метод вернул false */

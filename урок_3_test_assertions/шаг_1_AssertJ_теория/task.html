@@ -1,0 +1,105 @@
+<html>
+
+<h2>AssertJ - теория</h2>
+
+    В наших предыдущих тестах мы постоянно использовали метод <code>assertThat</code>,
+    который выполнял проверки в секции // Assert. Если посмотреть вверху
+    тестового файла, то мы увидим откуда этот метод импортирован:
+</p>
+<code>
+    import static org.assertj.core.api.Assertions.assertThat;
+</code>
+<p>
+    То есть мы импортировали статический публичный метод <code>assertThat</code> из класса
+    <code>Assertions</code>. А с ключевым словом <code>import static</code> мы можем в коде
+    писать не <code>Assertions.assertThat()</code>,
+    а сразу <code>assertThat()</code>.
+</p>
+<p>
+    Если создать чистый Java проект без библиотек, то мы этот метод
+    нигде не найдём: AssertJ - это библиотека, которую можно, например,
+    подключить через систему сборки Gradle или Maven. В этом курсе
+    библиотека проверок для тестов "AssertJ" подключена через
+    систему сборки Gradle. В файле build.gradle в разделе зависимостей
+    dependencies AssertJ объявлена вот так:
+</p>
+<code>
+    testImplementation "org.assertj:assertj-core:3.19.0"
+</code>
+<p>
+    <strong>AssertJ - это библиотека для проверок, и аналогов ей достаточно.</strong>
+</p>
+<p>
+    Хороший разработчик не боится залезть в код библиотеки и посмотреть,
+    что же там делается. Давайте посмотрим, что возвращает метод <code>assertThat</code>:
+</p>
+<code>
+    public static AbstractIntegerAssert assertThat(int actual)
+</code>
+<p>
+    Сверху видно декларацию метода <code>assertThat</code> в SimpleTest,
+    который проверяет, что 2 + 2 = 4.
+</p>
+<p>
+    Мы видим, что для примитивного типа int возвращается <code>AbstractIntegerAssert</code>,
+    который, кстати, если копнуть глубже, наследуется в свою очередь
+    от <code>AbstractComparableAssert</code>, а тот от <code>AbstractObjectAssert</code>. В каждом
+    из этих классов есть куча удобных методов для проверок.
+</p>
+<p>
+    AbstractIntegerAssert нам вернулся, потому что для проверок чисел AssertJ
+    имеет вот такие, например, удобные проверки:
+</p>
+<code>
+    assertThat(4).isPositive();
+</code>
+<br/>
+<code>
+    assertThat(4).isNegative();
+</code>
+<br/>
+<code>
+    assertThat(4).isZero();
+</code>
+<p>
+    А в прошлом уроке мы использовали специфичные для типа <code>boolean</code> проверки:
+</p>
+<code>
+    assertThat(new Card(10)).hasPositiveBalance()).isTrue();
+</code>
+<br/>
+<code>
+    assertThat(new Card(10)).hasNegativeBalance()).isFalse();
+</code>
+<p>
+    Похожие по смыслу удобные классы с проверками нам вернутся другие для коллекций,
+     или строк. Но все будут наследоваться от <code>AbstractComparableAssert</code>:
+    так что всегда есть возможность, например, просто использовать метод <code>isEqualTo()</code>.
+</p>
+<p>
+    Чтобы найти нужную вам проверку, просто прикиньте как она могла бы называться по-английски,
+    и начните вводить после <code>assertThat(something). ...</code>
+    и IntelliJ IDEA выведет список методов с похожими названиями.
+</p>
+<p>
+    Возможно возникает вопрос: "а зачем целая библиотека с кучей методов, когда
+    можно просто всегда использовать <code>isEqualTo()?</code>"
+</p>
+
+<ul>
+    <li>Читабельность. Согласитесь, что <code>assertThat(4).isPositive()</code> гораздо удобнее читать, чем <code>assertThat(4 > 0).isEqualTo(true)</code></li>
+    <br/>
+    <li>Логика часто используемых проверок бывает не такая простая, как в примере 2+2=4. Например, для коллекций есть много не самых простых, но очень полезных проверок.</li>
+    <br/>
+    <li>Сообщения об ошибке проверки в <code>isEqualTo()</code> не такие понятные, как во многих других специфичных методах.</li>
+</ul>
+<p>
+    <strong>Ах да, а как эти проверки работают то?</strong>
+</p>
+<p>
+    В javadoc метода, завершающего проверку,
+    например, <code>isEqualTo()</code>, можно увидеть, что этот метод бросает исключение класса
+    AssertionError - именно это исключение в случае ошибки сообщает движку тестов
+    JUnit, что тест зафейлился и по какой причине.
+</p>
+</html>

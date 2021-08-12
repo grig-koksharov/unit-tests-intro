@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="simple.SimpleTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-25T11:17:50" hostname="MOW-C02YR137LVDR" time="0.038">
+  <properties/>
+  <testcase name="should_get_4_when_adding_2_to_2" classname="simple.SimpleTest" time="0.038"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

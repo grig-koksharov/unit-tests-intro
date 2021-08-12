@@ -1,0 +1,72 @@
+<html>
+
+<h2>AssertJ - практика 1</h2>
+
+<p>
+    Представьте, вы разработчик банкомата, и в этот раз копаетесь
+    в компоненте системы банкомата, отвечающего за подсчёт купюр.
+    То есть логику, которая в курсе, сколько нужно дать купюр и каких
+    в обмен на какое-то число рублей.
+</p>
+
+<p>
+    В этой задаче эта логика спрятана в файле <code>src/banknotes/BanknotesPicker</code>,
+    и наша задача эту логику протестировать в файле <code>test/banknotes/BanknotesPickerTest</code>.
+</p>
+
+<p>
+    Вот как выглядит интерфейс класса <code>BanknotesPicker</code>:
+</p>
+
+<code>
+    public Collection(Banknote) pickBanknotesByAmount(int amount)
+</code>
+
+<p>
+    То есть <code>BanknotesPicker</code> принимает колличество рублей, а в обмен
+    отдаёт коллекцию купюр - объектов перечисления <code>Banknote</code>.
+    Реализацию перечисления <code>Banknote</code> вы можете увидеть сами в
+    файле <code>src/banknotes/Banknote</code>.
+    В этом перечислении обозначены варианты рублёвых купюр,
+    которыми наш банкомат умеет манипулировать.
+    И ещё там есть поле типа <code>int</code> с названием <code>value</code>,
+    обозначающее ценность купюры в колличестве рублей.
+</p>
+
+<p>
+    <strong>Наша задача</strong> - протестировать <code>BanknotesPicker</code> в <code>BanknotesPickerTest</code>.
+</p>
+
+<p>
+    <code>BanknotesPicker</code> уже проинициализирован в классе теста как поле класса - <code>new BanknotesPicker()</code>:
+    так удобно делать, когда не хочется в каждом методе теста заново инициализировать одно и то же.
+</p>
+
+<p>
+    Чтобы протестировать <code>BanknotesPicker</code>, надо знать, что он должен делать.
+    Задача этого класса - выдать минимальное колличество купюр для запрошенного колличества рублей.
+</p>
+
+<p>
+    Например, для суммы <strong>5250</strong> банкомат вернёт вот такие купюры:
+</p>
+
+<code>FIVE_THOUSAND, TWO_HUNDRED, FIFTY</code>.
+
+<p>Давайте протестируем некоторые сценарии:</p>
+
+<ul>
+    <li><code>should_pick_banknotes_when_all_types_of_banknotes_are_included</code> - сценарий, когда возвращается каждая разная купюра по одной.</li>
+    <br/>
+    <li><code>should_pick_banknotes_when_some_of_banknote_types_are_missing</code> - сценарий, когда в результате отсутствуют некоторые виды купюр, но нет по несколько одинаковых купюр.</li>
+    <br/>
+    <li><code>should_pick_banknotes_when_some_of_banknote_types_repeat</code> - сценарий, когда возвращается по несколько купюр одного вида.</li>
+</ul>
+
+<p>
+    Зная, как должен работать <code>BanknotesPicker</code>, вы можете предугадать какие купюры
+    он должен вернуть для той или иной суммы. А проверить в тесте это можно с помощью, например, вот такого
+    метода: <code>assertThat(pickedBanknotes).containsOnly(expectedBanknotes)</code>.
+</p>
+
+</html>

@@ -1,0 +1,67 @@
+<html>
+
+<h2>AssertJ - практика 4</h2>
+
+<p>
+    Хотя... А, может, странный какой-то интерфейс вышел с Optional?
+    А давайте представим ситуацию немного другую:
+    <code>BanknotesPicker</code> просто будет бросать ошибку,
+    если не получается вернуть купюры без сдачи.
+</p>
+
+<p>
+    Давайте протестируем следующие сценарии:
+</p>
+
+<ul>
+    <li><code>should_throw_error_when_there_is_change</code> - сценарий, когда бросается ошибка <code>InvalidArgumentException</code>: не находится купюр без сдачи.</li>
+    <br/>
+    <li><code>should_throw_error_when_amount_is_negative</code> - сценарий, когда бросается ошибка <code>InvalidArgumentException</code>: запрошенное колличество рублей меньше нуля.</li>
+    <br/>
+    <li><code>should_throw_error_when_amount_is_zero</code> - сценарий, когда бросается ошибка <code>InvalidArgumentException</code>: запрошенное колличество рублей равно нулю.</li>
+    <br/>
+    <li><code>should_not_throw_error_when_amount_is_positive_and_there_is_no_change</code> - сценарий, когда нет ошибки: нет сдачи и сумма больше нуля.</li>
+</ul>
+
+<p>
+    Чтобы протестировать, бросается ли ошибка, можно использовать следующие методы из AssertJ:
+</p>
+
+<code>
+    assertThatThrownBy(() -> testedMethod())
+    .isInstanceOf(ExpectedException.class);
+</code>
+
+<p>
+    А бывает такое, что мы хотим проверить, что никакой ошибки не было.
+    Вообще, в такой ситуации часто логичнее просто проверить результат
+    или может просто закончить тест комментарием <code>// Assert no error is thrown</code>.
+    Но в целях обучения давайте <strong>для последнего теста воспользуемся следующим методом:</strong>
+</p>
+
+<code>
+    assertThatCode(() -> testedMethod())
+    .doesNotThrowAnyException();
+</code>
+
+<p>
+    Иногда есть смысл проверить сообщение ошибки, ведь тест может упасть с ожидаемой
+    <code>ExpectedException</code>, но не по той причине, которую предполагает ваш тестовый сценарий.
+</p>
+
+<p><strong>
+    Для этой задачи, давайте проверим, что для негативной суммы сообщение включает
+    слово "negative", для нулевой "zero", а для суммы со сдачей "change".
+</strong></p>
+
+<p>
+    Вот пример, как можно проверить сообщение об ошибке
+</p>
+
+<code>
+    assertThatThrownBy(() -> testedMethod())
+    .isInstanceOf(ExpectedException.class)
+    .hasMessageContaining("Expected words");
+</code>
+
+</html>

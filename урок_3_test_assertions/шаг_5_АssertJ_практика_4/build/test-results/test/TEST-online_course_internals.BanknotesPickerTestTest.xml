@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="online_course_internals.BanknotesPickerTestTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2021-05-26T12:07:58" hostname="MOW-C02YR137LVDR" time="0.144">
+  <properties/>
+  <testcase name="should_fail_should_throw_error_when_amount_is_negative_when_buggy_implementation" classname="online_course_internals.BanknotesPickerTestTest" time="0.129"/>
+  <testcase name="should_fail_should_throw_error_when_there_is_change_when_buggy_implementation" classname="online_course_internals.BanknotesPickerTestTest" time="0.005"/>
+  <testcase name="should_pass_should_throw_error_when_amount_is_zero_when_correct_implementation" classname="online_course_internals.BanknotesPickerTestTest" time="0.001"/>
+  <testcase name="should_fail_should_throw_error_when_amount_is_zero_when_buggy_implementation" classname="online_course_internals.BanknotesPickerTestTest" time="0.002"/>
+  <testcase name="should_pass_should_not_throw_error_when_amount_is_positive_and_there_is_no_change_when_correct_implementation" classname="online_course_internals.BanknotesPickerTestTest" time="0.003"/>
+  <testcase name="should_pass_should_throw_error_when_there_is_change_when_correct_implementation" classname="online_course_internals.BanknotesPickerTestTest" time="0.001"/>
+  <testcase name="should_fail_should_not_throw_error_when_amount_is_positive_and_there_is_no_change_when_buggy_implementation" classname="online_course_internals.BanknotesPickerTestTest" time="0.001"/>
+  <testcase name="should_pass_should_throw_error_when_amount_is_negative_when_correct_implementation" classname="online_course_internals.BanknotesPickerTestTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

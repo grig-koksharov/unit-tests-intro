@@ -1,0 +1,44 @@
+type: edu
+files:
+- name: src/card/Card.java
+  visible: true
+- name: test/online_course_internals/CardTestTest.java
+  visible: false
+- name: src/online_course_internals/TestMode.java
+  visible: false
+- name: src/online_course_internals/TestedValues.java
+  visible: false
+- name: src/online_course_internals/UnderTestLogic.java
+  visible: false
+- name: src/online_course_internals/IncorrectTestMessages.java
+  visible: false
+- name: test/card/CardTest.java
+  visible: true
+  placeholders:
+  - offset: 250
+    length: 25
+    placeholder_text: /* инициализируйте карту с негативным балансом */
+  - offset: 300
+    length: 50
+    placeholder_text: /* запишите в переменную, что возвращает тестируемый метод */
+  - offset: 378
+    length: 39
+    placeholder_text: /* проверьте, что тестируемый метод вернул true */
+  - offset: 546
+    length: 24
+    placeholder_text: /* инициализируйте карту с позитивным балансом * */
+  - offset: 595
+    length: 50
+    placeholder_text: /* запишите в переменную, что возвращает тестируемый метод */
+  - offset: 673
+    length: 40
+    placeholder_text: /* проверьте, что тестируемый метод вернул false */
+  - offset: 838
+    length: 23
+    placeholder_text: /* инициализируйте карту с нулевым балансом */
+  - offset: 886
+    length: 50
+    placeholder_text: /* запишите в переменную, что возвращает тестируемый метод */
+  - offset: 964
+    length: 40
+    placeholder_text: /* проверьте, что тестируемый метод вернул false */

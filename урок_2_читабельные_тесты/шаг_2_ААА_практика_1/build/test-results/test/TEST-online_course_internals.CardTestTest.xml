@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="online_course_internals.CardTestTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2021-08-07T11:14:55" hostname="MOW-C02YR137LVDR" time="0.078">
+  <properties/>
+  <testcase name="should_pass_should_have_positive_balance_when_balance_is_greater_than_0_when_correct_implementation" classname="online_course_internals.CardTestTest" time="0.07"/>
+  <testcase name="should_fail_should_have_positive_balance_when_balance_is_greater_than_0_when_buggy_implementation" classname="online_course_internals.CardTestTest" time="0.003"/>
+  <testcase name="should_pass_should_not_have_positive_balance_when_balance_is_less_than_0_when_correct_implementation" classname="online_course_internals.CardTestTest" time="0.001"/>
+  <testcase name="should_fail_should_not_have_positive_balance_when_balance_is_less_than_0_when_buggy_implementation" classname="online_course_internals.CardTestTest" time="0.001"/>
+  <testcase name="should_pass_should_not_have_positive_balance_when_balance_is_equal_to_0_when_correct_implementation" classname="online_course_internals.CardTestTest" time="0.001"/>
+  <testcase name="should_fail_should_not_have_positive_balance_when_balance_is_equal_to_0_when_buggy_implementation" classname="online_course_internals.CardTestTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

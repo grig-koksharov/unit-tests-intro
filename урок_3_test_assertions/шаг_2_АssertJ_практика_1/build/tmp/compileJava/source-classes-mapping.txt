@@ -1,0 +1,12 @@
+online_course_internals/TestMode.java
+ online_course_internals.TestMode
+banknotes/Banknote.java
+ banknotes.Banknote
+online_course_internals/TestedValues.java
+ online_course_internals.TestedValues
+banknotes/BanknotesPicker.java
+ banknotes.BanknotesPicker
+online_course_internals/UnderTestLogic.java
+ online_course_internals.UnderTestLogic
+online_course_internals/IncorrectTestMessages.java
+ online_course_internals.IncorrectTestMessages

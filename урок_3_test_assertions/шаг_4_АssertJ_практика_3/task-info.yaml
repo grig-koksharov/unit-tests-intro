@@ -1,0 +1,25 @@
+type: edu
+files:
+- name: src/online_course_internals/TestMode.java
+  visible: false
+- name: src/online_course_internals/TestedValues.java
+  visible: false
+- name: src/online_course_internals/UnderTestLogic.java
+  visible: false
+- name: src/online_course_internals/IncorrectTestMessages.java
+  visible: false
+- name: src/banknotes/Banknote.java
+  visible: true
+- name: src/banknotes/BanknotesPicker.java
+  visible: true
+- name: test/banknotes/BanknotesPickerTest.java
+  visible: true
+  placeholders:
+  - offset: 378
+    length: 200
+    placeholder_text: // Arrange // Act // Assert
+  - offset: 683
+    length: 225
+    placeholder_text: // Arrange // Act // Assert
+- name: test/online_course_internals/BanknotesPickerTestTest.java
+  visible: false

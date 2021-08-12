@@ -1,0 +1,64 @@
+<html>
+
+<h2>AssertJ - практика 3</h2>
+
+<p>
+    А мы ведь совсем забыли о случае,
+    <strong>
+        когда на запрошенную сумму купюр без сдачи не подобрать.
+    </strong>
+</p>
+<p>
+    Именно для такого случая
+    давайте подправим интерфейс класса <code>BanknotesPicker</code>.
+    Теперь метод <code>pickBanknotesByAmount</code> возвращает
+    не <code>Collection(Banknote)</code>, а <code>Optional(Collection(Banknote))</code>.
+    Класс <code>Optional</code> оборачивают коллекцию банкнот, которая может БЫТЬ,
+    а может НЕ БЫТЬ.
+</p>
+
+<p>
+    Напоминаю, класс <code>Optional</code> - это попытка разработчиков
+    языка Java заменить null и дать хоть какой-то более явный способ бороться с проблемами
+    nullability в языке Java: ведь тут с этим всё совсем плохо,
+    непонятно, может ли какой-то объект быть <code>null</code>,
+    или не может.
+</p>
+
+<p>
+    Теперь, с <code>Optional</code>, интерфейс класса <code>BanknotesPicker</code>
+    явнее подчёркивает, что если не нашлось купюр без сдачи, то вернётся <code>Optional.empty()</code>,
+    а если купюры без сдачи нашлись, то вернётся <code>Optional.of(banknotes)</code>.
+</p>
+
+<p>
+    Давайте проверим, что <code>BanknotesPicker</code> работает, как надо.
+    <br/>
+    <strong>Наша задача - написать следующие 2 теста:</strong>
+</p>
+
+<ul>
+    <li><code>should_return_empty_result_when_cannot_pick_banknotes_with_no_change</code></li>
+    <br/>
+    <li><code>should_return_banknotes_when_can_pick_banknotes_with_no_change</code></li>
+</ul>
+
+<p>
+    <strong>Подсказка 1</strong> - AssertJ предоставляет удобные методы для работы с классом <code>Optional</code>.
+    Например: <code>assertThat(optional).isPresent()</code>, <code>assertThat(optional).isEmpty()</code>,
+    <code>assertThat(optional).hasValue(value)</code>.
+</p>
+
+<p>
+    <strong>Подсказка 2</strong> - недостаточно проверить <code>assertThat(optional).isPresent()</code>.
+    Если уж в <code>optional</code> что-то есть и метод <code>assertThat(optional).hasValue(value)</code> недостаточно гибок,
+    то всё равно не поленитесь проверить, что внутренность <code>optional</code>
+    совпадает с тем, что вы ожидаете. Для этого можно после проверки <code>isPresent()</code>
+    проверить значение вот так: <code>assertThat(optional.get())</code>. Или круче:
+    <code>assertThat(optional).get().asList().containsOnly(...)</code> - вот так, например, можно используя методы
+    AssertJ вытащить значение объекта <code>optional</code>. Таких дополняющих методов
+    в AssertJ много. Можно даже сообщение ошибки проверки переопределить:
+    <code>assertThat(...).overridingErrorMessage("Моё сообщение об ошибке").isEqualTo(...)</code>
+</p>
+
+</html>

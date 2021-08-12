@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="online_course_internals.BanknotesPickerTestTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2021-05-25T11:17:56" hostname="MOW-C02YR137LVDR" time="0.115">
+  <properties/>
+  <testcase name="should_pass_should_pick_banknotes_when_some_of_banknote_types_are_missing_when_correct_implementation" classname="online_course_internals.BanknotesPickerTestTest" time="0.104"/>
+  <testcase name="should_fail_should_pick_banknotes_when_all_types_of_banknotes_are_included_when_buggy_implementation" classname="online_course_internals.BanknotesPickerTestTest" time="0.004"/>
+  <testcase name="should_pass_should_pick_banknotes_when_all_types_of_banknotes_are_included_when_correct_implementation" classname="online_course_internals.BanknotesPickerTestTest" time="0.001"/>
+  <testcase name="should_pass_should_pick_banknotes_when_some_of_banknote_types_repeat_when_correct_implementation" classname="online_course_internals.BanknotesPickerTestTest" time="0.001"/>
+  <testcase name="should_fail_should_pick_banknotes_when_some_of_banknote_types_repeat_when_buggy_implementation" classname="online_course_internals.BanknotesPickerTestTest" time="0.001"/>
+  <testcase name="should_fail_should_pick_banknotes_when_some_of_banknote_types_are_missing_when_buggy_implementation" classname="online_course_internals.BanknotesPickerTestTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

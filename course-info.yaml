@@ -1,0 +1,11 @@
+type: marketplace
+title: Тестирование в Java
+language: Russian
+summary: Курс, раскрывающий тему тестирования в Java
+vendor:
+  name: Grigorii Koksharov
+programming_language: Java
+content:
+- урок_1_введение
+- урок_2_читабельные_тесты
+- урок_3_test_assertions

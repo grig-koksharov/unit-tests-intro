@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="banknotes.BanknotesPickerTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-05-26T12:07:58" hostname="MOW-C02YR137LVDR" time="0.0">
+  <properties/>
+  <testcase name="should_throw_error_when_there_is_change" classname="banknotes.BanknotesPickerTest" time="0.0"/>
+  <testcase name="should_throw_error_when_amount_is_zero" classname="banknotes.BanknotesPickerTest" time="0.0"/>
+  <testcase name="should_not_throw_error_when_amount_is_positive_and_there_is_no_change" classname="banknotes.BanknotesPickerTest" time="0.0"/>
+  <testcase name="should_throw_error_when_amount_is_negative" classname="banknotes.BanknotesPickerTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
